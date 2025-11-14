@@ -1,0 +1,86 @@
+{
+    "strategy": {
+        "execution": 0,
+        "error": 0,
+        "errorRetries": 0
+    },
+    "actions": [
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 23687
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 35392
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 29479
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 34963
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 51882
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 47650
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 21415
+            }
+        },
+        {
+            "actionID": "{FCE37F48-DA3F-45DD-AC77-71343792CC2D}",
+            "parameters": {
+                "VALUE": false,
+                "TARGET": 10450
+            }
+        },
+        {
+            "actionID": "{A4C53C8D-795E-403A-9EEC-CC0D71E89A20}",
+            "parameters": {
+                "VALUE": 0,
+                "TARGET": 21926
+            }
+        },
+        {
+            "actionID": "{A4C53C8D-795E-403A-9EEC-CC0D71E89A20}",
+            "parameters": {
+                "VALUE": 0,
+                "TARGET": 24750
+            }
+        },
+        {
+            "actionID": "{A4C53C8D-795E-403A-9EEC-CC0D71E89A20}",
+            "parameters": {
+                "VALUE": 0,
+                "TARGET": 47195
+            }
+        }
+    ]
+}
