@@ -1,8 +1,11 @@
 <?php
 /*
-Lademanagement mit Fair-Share-Prinzip + Priorisierungszeitraum + Farbige Anzeige
-Programmierer: Mike Dorr
-Projekt: HVG241 Meisterprüfung
+    Lademanagement
+    - Fair-Share-Prinzip
+    - Priorisierungszeitraum
+    - Farbige Anzeige
+    Programmierer: Mike Dorr
+    Projekt: HVG241 Meisterprüfung
 */
 
 // Änderungen aus WebFront
@@ -169,4 +172,7 @@ $html .= '<div style="margin-top:6px; font-size:11px; color:gray;">Stand: '.date
 $html .= '</div>';
 
 SetValueString($varHTML, $html);
+
+// Ausgabe
+echo "Energie Manager aktualisiert um ".date("H:i:s")." (Referenz: $available_kW kW)\n";
 ?>
