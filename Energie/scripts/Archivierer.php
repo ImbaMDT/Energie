@@ -8,12 +8,14 @@
 
 // Konfiguration
 $logVars = [
-    21926, // Wallbox1_Ladeleistung
-    24750, // Wallbox2_Ladeleistung
-    47195, // Wärmepumpe
-    57932, // PV-Leistung
-    20250, // Hausverbrauch
-    99999  // Heizstab (hier bitte echte ID eintragen)
+    17849, // Wallbox1_Ladeleistung
+    12904, // Wallbox2_Ladeleistung
+    54164, // Wärmepumpe
+    42994,  // Heizstab
+    37381, // PV-Leistung
+    37163, // Hausverbrauch
+    53609,  // Batterie_Ladeleistung
+    56622 //Verbrauch Gesamt
 ];
 
 // Archiv-Instanz ermitteln
@@ -36,3 +38,4 @@ foreach ($logVars as $vid) {
 
 // Änderungen anwenden
 IPS_ApplyChanges($archiveID);
+?>
