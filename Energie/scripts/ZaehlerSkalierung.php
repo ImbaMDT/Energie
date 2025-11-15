@@ -1,17 +1,19 @@
 <?php
 /*
     Zähler Skalierung
-    - verwendet reale Leistungswerte (kW) der Referenzvariable
+    - verwendet EASTRON-Zähler als Referenzvariable
     - skaliert anteilig auf Z1–Z8
-    - erzeugt sauberes Dashboard mit HTML-Tabelle
+    - erzeugt Dashboard mit HTML-Tabelle
+    - Erzeugt Zusatzzähler als Kontrollinstanz
     Programmierer: Mike Dorr
     Projekt: HVG241 Meisterprüfung
 */
 
 // IDs deiner Variablen
-$REF_VAR_ID = 35210;  // Referenz (Messwandler-Leistung gesamt)
+$REF_VAR_ID = 42907;  // Referenz (Messwandler-Leistung gesamt)
 $catName = "Messkonzept_Skalierung_Historie";
 $parentID = 0;
+$pv = 37381;
 
 // Prozentuale Aufteilung (Summe = 100 %)
 $distribution = [
@@ -27,7 +29,8 @@ $labels = [
     'Meter5'=>'Z5_Mieter5_2OG [kW]',
     'Meter6'=>'Z6_WP_und_Allgemein [kW]',
     'Meter7'=>'Z7_Zweirichtungs_PV [kW]',
-    'Meter8'=>'Z8_Messwandler_Haupt [kW]'
+    'Meter8'=>'Z8_Messwandler_Haupt [kW]',
+    'Meter9'=>'Z9_Kontroll_Zaehler [kW]'
 ];
 
 // Kategorie prüfen/erstellen
@@ -70,6 +73,7 @@ IPS_ApplyChanges($archiveID);
 
 // Skalierung
 $val = GetValueFloat($REF_VAR_ID);
+$ertragszähler = GetValueFloat($pv);
 if ($val > 0) {
     $sumSub = 0;
     foreach ($distribution as $key => $pct) {
@@ -78,8 +82,9 @@ if ($val > 0) {
         $sumSub += $scaled;
     }
     $bal = $val - $sumSub;
-    SetValueFloat($varIDs['Meter7'], $bal);
+    SetValueFloat($varIDs['Meter7'], $ertragszähler);
     SetValueFloat($varIDs['Meter8'], $val);
+    SetValueFloat($varIDs['Meter9'], $bal);
 } else {
     IPS_LogMessage("Lademanagement", "Referenzwert = 0 kW (ID $REF_VAR_ID)");
 }
