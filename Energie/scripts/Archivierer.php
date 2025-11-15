@@ -1,5 +1,4 @@
 <?php
-
 /*
     Archivierer
     - Archiviert automatisch alle Großverbraucher
