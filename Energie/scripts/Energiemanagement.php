@@ -16,16 +16,16 @@ if ($_IPS['SENDER'] == "WebFront") {
 }
 
 // IDs deiner Variablen
-$VID_PV       = 57932;
-$VID_HOUSE    = 20250;
-$VID_BATT_SOC = 47364;
-$VID_WB1_RD   = 35569;
-$VID_WB2_RD   = 45392;
-$VID_WB1_CONNECTED = 12345;
-$VID_WB2_CONNECTED = 23456;
-$VID_WB1_WR   = 21926;
-$VID_WB2_WR   = 24750;
-$VID_HEATPUMP = 47195;
+$VID_PV       = 37381;
+$VID_HOUSE    = 37163;
+$VID_BATT_SOC = 33860;
+$VID_WB1_RD   = 17849;
+$VID_WB2_RD   = 12904;
+$VID_WB1_CONNECTED = 11167;
+$VID_WB2_CONNECTED = 31450;
+$VID_WB1_WR   = 17849;
+$VID_WB2_WR   = 12904;
+$VID_HEATPUMP = 42994;
 
 $MAX_HAUS_KW = 60.0;
 $WB_MAX = ['wb1'=>11.0,'wb2'=>11.0];
@@ -65,7 +65,7 @@ $varHTML = ensureVariable("Dashboard_HTML", 3, $catID, "~HTMLBox");
 // Werte einlesen
 $pv     = GetValueFloat($VID_PV);
 $house  = GetValueFloat($VID_HOUSE);
-$batt   = GetValueFloat($VID_BATT_SOC);
+$batt   = GetValueInteger($VID_BATT_SOC);
 $wb1_rd = GetValueFloat($VID_WB1_RD);
 $wb2_rd = GetValueFloat($VID_WB2_RD);
 $hour = (int)date("G");
@@ -171,7 +171,7 @@ if (!$zeitfensterAktiv) {
 
 // Dashboard erzeugen
 $html  = '<div style="font-family:Segoe UI, sans-serif; padding:10px;">';
-$html .= '<h2 style="margin-bottom:10px;">⚡ Lademanagement Übersicht (Fair-Share)</h2>';
+$html .= '<h2 style="margin-bottom:10px;">Lademanagement Übersicht (Fair-Share)</h2>';
 $html .= '<table style="width:100%; border-collapse:collapse;">';
 $html .= "<tr><td>Systemzeit:</td><td><b>".date("H:i")." Uhr</b></td></tr>";
 $html .= "<tr><td>PV-Leistung:</td><td><b>".round($pv,1)." kW</b></td></tr>";
