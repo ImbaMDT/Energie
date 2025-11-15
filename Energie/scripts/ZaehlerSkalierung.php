@@ -1,8 +1,12 @@
 <?php
-// 	Zähler_Skalierung
-//  - verwendet reale Leistungswerte (kW) der Referenzvariable
-//  - skaliert anteilig auf Z1–Z8
-//  - erzeugt sauberes Dashboard mit HTML-Tabelle
+/*
+    Zähler Skalierung
+    - verwendet reale Leistungswerte (kW) der Referenzvariable
+    - skaliert anteilig auf Z1–Z8
+    - erzeugt sauberes Dashboard mit HTML-Tabelle
+    Programmierer: Mike Dorr
+    Projekt: HVG241 Meisterprüfung
+*/
 
 // IDs deiner Variablen
 $REF_VAR_ID = 35210;  // Referenz (Messwandler-Leistung gesamt)
@@ -11,8 +15,8 @@ $parentID = 0;
 
 // Prozentuale Aufteilung (Summe = 100 %)
 $distribution = [
-    'Meter1'=>25, 'Meter2'=>12, 'Meter3'=>12,
-    'Meter4'=>12, 'Meter5'=>12, 'Meter6'=>15
+    'Meter1'=>30, 'Meter2'=>20, 'Meter3'=>8,
+    'Meter4'=>25, 'Meter5'=>12, 'Meter6'=>5
 ];
 
 $labels = [
@@ -22,7 +26,7 @@ $labels = [
     'Meter4'=>'Z4_Mieter4_2OG [kW]',
     'Meter5'=>'Z5_Mieter5_2OG [kW]',
     'Meter6'=>'Z6_WP_und_Allgemein [kW]',
-    'Meter7'=>'Z7_Zweirichtungs_Bilanz [kW]',
+    'Meter7'=>'Z7_Zweirichtungs_PV [kW]',
     'Meter8'=>'Z8_Messwandler_Haupt [kW]'
 ];
 
